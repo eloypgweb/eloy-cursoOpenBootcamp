@@ -1,0 +1,9 @@
+<h1>Tus Contactos</h1>
+
+<!-- Listar los contactos desde mi interface/component.ts -->
+<div *ngFor="let contacto of listaContactos; let i=index">
+<div routerLink="{{contacto.id}}">
+    <h5>{{contacto.nombre}} </h5>
+</div>
+</div>
+
