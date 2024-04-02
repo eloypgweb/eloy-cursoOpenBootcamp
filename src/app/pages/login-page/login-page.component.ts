@@ -9,4 +9,8 @@ import { Component } from '@angular/core';
 })
 export class LoginPageComponent {
 
+  ngOnInit(): void {
+    sessionStorage.setItem('token', '123456789');
+  }
+
 }

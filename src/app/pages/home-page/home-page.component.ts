@@ -22,8 +22,8 @@ export class HomePageComponent {
     console.log('HomePageComponent initialized');
   }
 
-  navegarParaContacts() {
-    //this.router.navigate(['/contacts']);
+  navegarParaContacts(): void {
+    this.router.navigate(['contacts']);
   }
 
 }
