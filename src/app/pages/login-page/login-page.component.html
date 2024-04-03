@@ -1,4 +1,12 @@
-<mat-form-field>
+<!-- Formulario -->
+<input [(ngModel)]="email" type="email" placeholder="Email" />
+<input [(ngModel)]="password" type="password" placeholder="Password" />
+
+<button (click)="loginUser()">Acceder</button>
+
+
+
+<!-- <mat-form-field>
     <mat-label>Input</mat-label>
     <input matInput>
 </mat-form-field>
@@ -15,4 +23,4 @@
 
 </mat-form-field>
 <button (click)="loginUser()">Acceder</button>
-  
+-->
