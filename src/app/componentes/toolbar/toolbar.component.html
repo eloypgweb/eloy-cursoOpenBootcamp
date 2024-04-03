@@ -1,19 +1,19 @@
 <p>
-    <mat-toolbar>
-      <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-        <mat-icon>menu</mat-icon>
-      </button>
-      <span>My App</span>
-      <span class="example-spacer"></span>
-      <button (click)="navegarParaHome()" mat-raised-button color="warn">Home</button>
-      <a mat-raised-button routerLink="/login" >LogIn</a>
-      <button (click)="navegarParaContacts()" mat-raised-button color="warn">Mis Contactos</button>
-      <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-        <mat-icon matBadge="33" matBadgeColor="warn">favorite</mat-icon>
-      </button>
-      
-      <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-        <mat-icon>share</mat-icon>
-      </button>
-    </mat-toolbar>
+  <mat-toolbar>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>Curso BootCamp - Eloy</span>
+    <span class="example-spacer"></span>
+    <button (click)="navegarParaHome()" mat-raised-button color="warn">Home</button>
+    <a *ngIf="!token" mat-raised-button (click)="login()">LogIn</a>
+    <a *ngIf="token" mat-raised-button (click)="logout()">LogOut</a>
+    <button (click)="navegarParaContacts()" mat-raised-button color="warn">Mis Contactos</button>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon matBadge="33" matBadgeColor="warn">favorite</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>share</mat-icon>
+    </button>
+  </mat-toolbar>
 </p>

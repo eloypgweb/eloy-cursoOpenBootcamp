@@ -4,6 +4,7 @@
 <div *ngFor="let contacto of listaContactos; let i=index">
 <div routerLink="{{contacto.id}}">
     <h3>{{contacto.nombre}} </h3>
+    <button (click)="volverAHome(contacto)">Enviar Contacto</button>
 </div>
 </div>
 
