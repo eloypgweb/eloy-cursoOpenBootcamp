@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IContacto } from '../../models/contact.interface';
 import { NgFor } from '@angular/common';
 import { ActivatedRoute, NavigationExtras, Router, RouterLink } from '@angular/router';
+import { ContactService } from '../../service/contact.service';
 
 @Component({
   selector: 'app-contacts-page',
@@ -12,22 +13,28 @@ import { ActivatedRoute, NavigationExtras, Router, RouterLink } from '@angular/r
 })
 export class ContactsPageComponent {
 
-  listaContactos: IContacto[] = [
-    { id: 1, nombre: 'Juan', apellido: 'Perez', email: 'juanperez@seidor.es', sexo: 'hombre'},
-    { id: 2, nombre: 'Pedro', apellido: 'Gomez', email:  'pedrogomez@seidor.es', sexo: 'hombre'},
-    { id: 3, nombre: 'Maria', apellido: 'Lopez', email:  'marialopez@seidor.es', sexo: 'mujer'},
-    { id: 4, nombre: 'Laura', apellido: 'Garcia', email:  'lauragarcia@seidor.es', sexo: 'mujer'}
-  ];
+  filtroSexo: string = 'todos';
+  listaContactos: IContacto[] = [];
 
-
-  constructor(private router: Router, private route: ActivatedRoute) { }
+  constructor(private router: Router, private route: ActivatedRoute, private contactService: ContactService) { }
 
   ngOnInit(): void {
 
     // Obtenemos los query params
     this.route.queryParams.subscribe((params: any) => {
       console.log('Query param: ',params.sexo);
+      if(params.sexo){
+        this.filtroSexo = params.sexo;
+      }
+      // Obtenemos la lista de contactos
+      this.contactService.obternerContactos(this.filtroSexo)
+      .then(
+        (lista) => this.listaContactos = lista
+      ).catch((error) => { console.error('Ha habido un error al obtener los contactos: ', error); })
+      .finally(() => { console.info('Petición finalizada'); });
     })
+
+
 
   }
 
