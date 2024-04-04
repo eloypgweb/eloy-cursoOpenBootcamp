@@ -1,4 +1,28 @@
-<h1>Detalles del contacto</h1>
-<li>Id: {{id}}</li>
-<li>Nombre: name</li>
-<li>Descripción: description</li>
+<ng-container *ngIf="contacto?.email"; else elseTemplate>
+    <h1>Detalles del contacto</h1>
+
+    <mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>{{contacto?.nombre}} {{contacto?.apellido}}</mat-card-title>
+          <mat-card-subtitle>{{contacto?.email}}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <p>
+            La persona seleccionada se llama {{contacto?.nombre}} {{contacto?.apellido}}, con género {{contacto?.sexo}} y su email es {{contacto?.email}}.
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>LIKE</button>
+          <button mat-button>SHARE</button>
+        </mat-card-actions>
+      </mat-card>
+      
+
+</ng-container>
+
+<ng-template #elseTemplate>
+    <h1>Ups! No se encontró el contacto</h1>
+    <a routerLink="/contacts">Volver a la lista de contactos</a>
+</ng-template>
+

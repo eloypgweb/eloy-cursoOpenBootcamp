@@ -3,11 +3,13 @@ import { IContacto } from '../../models/contact.interface';
 import { NgFor } from '@angular/common';
 import { ActivatedRoute, NavigationExtras, Router, RouterLink } from '@angular/router';
 import { ContactService } from '../../service/contact.service';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
 
 @Component({
   selector: 'app-contacts-page',
   standalone: true,
-  imports: [NgFor, RouterLink],
+  imports: [NgFor, RouterLink, MatButtonModule, MatCardModule],
   templateUrl: './contacts-page.component.html',
   styleUrl: './contacts-page.component.scss'
 })

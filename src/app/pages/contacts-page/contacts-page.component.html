@@ -1,10 +1,18 @@
 <h1>Tus Contactos</h1>
 
 <!-- Listar los contactos desde mi interface/component.ts -->
-<div *ngFor="let contacto of listaContactos; let i=index">
-<div routerLink="{{contacto.id}}">
-    <h3>{{contacto.nombre}} </h3>
-    <button (click)="volverAHome(contacto)">Enviar Contacto</button>
-</div>
-</div>
 
+<div *ngFor="let contacto of listaContactos; let i=index">
+    <mat-card class="example-card">
+        <div routerLink="{{contacto.id}}" [state]="{data: contacto}">
+            <mat-card-header>
+                <div mat-card-avatar class="example-header-image"></div>
+                <mat-card-title>{{contacto.nombre}}</mat-card-title>
+            </mat-card-header>
+        </div>
+        <mat-card-actions>
+            <button mat-button (click)="volverAHome(contacto)">Enviar Contacto</button>
+        </mat-card-actions>
+    </mat-card>
+    <br><br>
+</div>
