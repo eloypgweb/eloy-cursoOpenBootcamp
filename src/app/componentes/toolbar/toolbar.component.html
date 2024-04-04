@@ -5,10 +5,12 @@
     </button>
     <span>Curso BootCamp - Eloy</span>
     <span class="example-spacer"></span>
-    <button (click)="navegarParaHome()" mat-raised-button color="warn">Home</button>
-    <a *ngIf="!token" mat-raised-button (click)="login()">LogIn</a>
-    <a *ngIf="token" mat-raised-button (click)="logout()">LogOut</a>
-    <button (click)="navegarParaContacts()" mat-raised-button color="warn">Mis Contactos</button>
+    <div class="botones">
+      <button class="botonsito" (click)="navegarParaHome()" mat-raised-button color="warn">Home</button>
+      <a class="botonsito" *ngIf="!token" mat-raised-button (click)="login()">LogIn</a>
+      <a class="botonsito" *ngIf="token" mat-raised-button (click)="logout()">LogOut</a>
+      <button class="botonsito" (click)="navegarParaContacts()" mat-raised-button color="warn">Mis Contactos</button>
+    </div>
     <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
       <mat-icon matBadge="33" matBadgeColor="warn">favorite</mat-icon>
     </button>
