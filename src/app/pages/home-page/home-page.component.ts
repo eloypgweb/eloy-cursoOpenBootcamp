@@ -7,11 +7,12 @@ import { RouterLink } from '@angular/router';
 import { Router } from '@angular/router';
 import { IContacto } from '../../models/contact.interface';
 import { NgIf } from '@angular/common';
+import { MatCardModule } from '@angular/material/card';
 
 @Component({
   selector: 'app-home-page',
   standalone: true,
-  imports: [MatButtonModule, MatDividerModule, MatIconModule, RouterLink, NgIf],
+  imports: [MatButtonModule, MatDividerModule, MatIconModule, RouterLink, NgIf, MatCardModule],
   templateUrl: './home-page.component.html',
   styleUrl: './home-page.component.scss'
 })

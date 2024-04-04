@@ -5,11 +5,14 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { Router } from '@angular/router';
 import { AuthService } from '../../service/auth.service';
 import { FormsModule } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @Component({
   selector: 'app-login-page',
   standalone: true,
-  imports: [MatFormFieldModule, MatInputModule, MatSelectModule, FormsModule],
+  imports: [MatFormFieldModule, MatInputModule, MatSelectModule, FormsModule, MatButtonModule, MatTooltipModule, MatIconModule],
   templateUrl: './login-page.component.html',
   styleUrl: './login-page.component.scss'
 })

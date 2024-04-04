@@ -1,26 +1,16 @@
+
 <!-- Formulario -->
-<input [(ngModel)]="email" type="email" placeholder="Email" />
-<input [(ngModel)]="password" type="password" placeholder="Password" />
-
-<button (click)="loginUser()">Acceder</button>
-
-
-
-<!-- <mat-form-field>
-    <mat-label>Input</mat-label>
-    <input matInput>
+<mat-form-field appearance="fill">
+    <mat-label>Email</mat-label>
+    <input matInput [(ngModel)]="email" type="email" placeholder="Email" />
 </mat-form-field>
-<mat-form-field>
-    <mat-label>Select</mat-label>
-    <mat-select>
-      <mat-option value="one">First option</mat-option>
-      <mat-option value="two">Second option</mat-option>
-    </mat-select>
-</mat-form-field>
-<mat-form-field>
-    <mat-label>Textarea</mat-label>
-    <textarea matInput></textarea>
 
+<mat-form-field appearance="fill">
+    <mat-label>Password</mat-label>
+    <input matInput [(ngModel)]="password" type="password" placeholder="Password" />
 </mat-form-field>
-<button (click)="loginUser()">Acceder</button>
--->
+
+<div class="example-button-row">
+    <button mat-raised-button color="accent" (click)="loginUser()">Acceder</button>
+</div>
+

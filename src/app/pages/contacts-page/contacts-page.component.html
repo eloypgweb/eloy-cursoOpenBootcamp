@@ -4,7 +4,7 @@
 
 <div *ngFor="let contacto of listaContactos; let i=index">
     <mat-card class="example-card">
-        <div routerLink="{{contacto.id}}" [state]="{data: contacto}">
+        <div class="parahover" routerLink="{{contacto.id}}" [state]="{data: contacto}">
             <mat-card-header>
                 <div mat-card-avatar class="example-header-image"></div>
                 <mat-card-title>{{contacto.nombre}}</mat-card-title>

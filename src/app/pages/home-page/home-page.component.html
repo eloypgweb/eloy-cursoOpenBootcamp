@@ -1,11 +1,16 @@
-<div class="example-button-row">
-    <img src="https://i.pinimg.com/originals/9d/9f/7c/9d9f7c9155df5374aa88b91aa7234b38.png" alt="up" style="width: 100%; height: auto; display: block; margin: 0 auto;">
-</div>
 
-<a [routerLink]="['/contacts']" [queryParams]="{sexo: 'hombre'}">Ver <strong>los</strong> colegas</a>
-<br><br>
-<a [routerLink]="['/contacts']" [queryParams]="{sexo: 'mujer'}">Ver <strong>las</strong> colegas</a>
+<mat-card *ngIf="contactoSeleccionado">
+    <mat-card-title>Bienvenido, <strong>{{contactoSeleccionado.nombre}} {{contactoSeleccionado.apellido}}</strong></mat-card-title>
+    <mat-card-subtitle>Correo: {{contactoSeleccionado.email}}</mat-card-subtitle>
+</mat-card>
+
+<mat-card class="example-button-row">
+    <img mat-card-image src="https://i.pinimg.com/originals/9d/9f/7c/9d9f7c9155df5374aa88b91aa7234b38.png" alt="up">
+</mat-card>
+
+<mat-card-actions class="cosas">
+    <button mat-button [routerLink]="['/contacts']" [queryParams]="{sexo: 'hombre'}">Ver <strong>los</strong> colegas</button>
+    <button mat-button [routerLink]="['/contacts']" [queryParams]="{sexo: 'mujer'}">Ver <strong>las</strong> colegas</button>
+</mat-card-actions>
 
 
-<h1 *ngIf="contactoSeleccionado">Bienvenido, <strong>{{contactoSeleccionado.nombre}} {{contactoSeleccionado.apellido}}</strong></h1>
-<h2 *ngIf="contactoSeleccionado">Correo: {{contactoSeleccionado.email}}</h2>

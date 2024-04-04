@@ -1,0 +1,20 @@
+.carta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    padding: 20px;
+    margin-top: -30px;
+}
+
+.cosas {
+    text-align: center;
+}
+
+.imagen {
+    max-width: 40%;
+    height: auto;
+}
