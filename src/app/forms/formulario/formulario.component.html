@@ -1,0 +1,56 @@
+<mat-card>
+  <mat-card-content>
+    <h1>Bienvenido al formulario</h1>
+  </mat-card-content>
+</mat-card>
+<form>
+  <mat-form-field hintLabel="Max 12 characters">
+    <mat-label>Nombre</mat-label>
+    <input
+      matInput
+      #input
+      maxlength="12"
+      placeholder="Ej. Eloy"
+      [formControl]="form.controls['name']"
+      required
+    />
+    <mat-hint align="end">{{ input.value.length }}/12</mat-hint>
+    <mat-error> Por favor, introduce un nombre. </mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Correo</mat-label>
+    <input
+      matInput
+      #input
+      placeholder="Ej. eperez15@seidor.es"
+      [formControl]="form.controls['email']"
+      email
+      required
+    />
+    <mat-error> Por favor, introduce un correo electrónico válido. </mat-error>
+  </mat-form-field>
+
+  <section>
+    <div class="example-button-row">
+      <div class="example-flex-container">
+        <div class="example-button-container">
+          <button
+            mat-fab
+            color=""
+            aria-label="Example icon button with a home icon"
+            [disabled]="!form.valid"
+            (click)="procesarFormulario()"
+          >
+            <mat-icon>trending_flat</mat-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+</form>
+
+<!-- <p>{{ name.value }}</p>
+<p>{{ email.value }}</p> -->
+<p>{{ form.get("name")?.value }}</p>
+<p>{{ form.get("email")?.value }}</p>

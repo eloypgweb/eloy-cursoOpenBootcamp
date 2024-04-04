@@ -1,24 +1,31 @@
-import { Component } from '@angular/core';
-import {MatIconModule} from '@angular/material/icon';
-import {MatButtonModule} from '@angular/material/button';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import { MatDividerModule } from '@angular/material/divider';
-import {MatBadgeModule} from '@angular/material/badge';
-import { RouterLink } from '@angular/router';
-import { Router } from '@angular/router';
 import { NgIf } from '@angular/common';
+import { Component } from '@angular/core';
+import { MatBadgeModule } from '@angular/material/badge';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatIconModule } from '@angular/material/icon';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-toolbar',
   standalone: true,
-  imports: [MatToolbarModule, MatButtonModule, MatIconModule, MatDividerModule, MatBadgeModule, RouterLink, NgIf],
+  imports: [
+    MatToolbarModule,
+    MatButtonModule,
+    MatIconModule,
+    MatDividerModule,
+    MatBadgeModule,
+    RouterLink,
+    NgIf,
+  ],
   templateUrl: './toolbar.component.html',
-  styleUrl: './toolbar.component.scss'
+  styleUrl: './toolbar.component.scss',
 })
 export class ToolbarComponent {
   token: string | null = null;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) {}
 
   ngOnInit(): void {
     console.log('ToolbarComponent initialized');
@@ -28,9 +35,13 @@ export class ToolbarComponent {
   navegarParaContacts(): void {
     this.router.navigate(['contacts']);
   }
-  
+
   navegarParaHome(): void {
     this.router.navigate(['/']);
+  }
+
+  navegarParaForm(): void {
+    this.router.navigate(['formulario']);
   }
 
   login(): void {

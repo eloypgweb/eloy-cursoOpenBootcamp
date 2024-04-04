@@ -1,20 +1,53 @@
 <p>
   <mat-toolbar>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <button
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with menu icon"
+    >
       <mat-icon>menu</mat-icon>
     </button>
     <span>Curso BootCamp - Eloy</span>
     <span class="example-spacer"></span>
     <div class="botones">
-      <button class="botonsito" (click)="navegarParaHome()" mat-raised-button color="warn">Home</button>
-      <a class="botonsito" *ngIf="!token" mat-raised-button (click)="login()">LogIn</a>
-      <a class="botonsito" *ngIf="token" mat-raised-button (click)="logout()">LogOut</a>
-      <button class="botonsito" (click)="navegarParaContacts()" mat-raised-button color="warn">Mis Contactos</button>
+      <button
+        class="botonsito"
+        (click)="navegarParaHome()"
+        mat-raised-button
+        color="warn"
+      >
+        Home
+      </button>
+      <a class="botonsito" *ngIf="!token" mat-raised-button (click)="login()"
+        >LogIn</a
+      >
+      <a class="botonsito" *ngIf="token" mat-raised-button (click)="logout()"
+        >LogOut</a
+      >
+      <button
+        class="botonsito"
+        (click)="navegarParaContacts()"
+        mat-raised-button
+        color="warn"
+      >
+        Mis Contactos
+      </button>
+      <a class="botonsito" mat-raised-button (click)="navegarParaForm()"
+        >Formulario</a
+      >
     </div>
-    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+    <button
+      mat-icon-button
+      class="example-icon favorite-icon"
+      aria-label="Example icon-button with heart icon"
+    >
       <mat-icon matBadge="33" matBadgeColor="warn">favorite</mat-icon>
     </button>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+    <button
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with share icon"
+    >
       <mat-icon>share</mat-icon>
     </button>
   </mat-toolbar>
