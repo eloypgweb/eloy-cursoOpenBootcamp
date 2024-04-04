@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import {MatSelectModule} from '@angular/material/select';
-import {MatInputModule} from '@angular/material/input';
-import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { Router } from '@angular/router';
 import { AuthService } from '../../service/auth.service';
 import { FormsModule } from '@angular/forms';
@@ -12,16 +12,23 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 @Component({
   selector: 'app-login-page',
   standalone: true,
-  imports: [MatFormFieldModule, MatInputModule, MatSelectModule, FormsModule, MatButtonModule, MatTooltipModule, MatIconModule],
+  imports: [
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule,
+    FormsModule,
+    MatButtonModule,
+    MatTooltipModule,
+    MatIconModule,
+  ],
   templateUrl: './login-page.component.html',
-  styleUrl: './login-page.component.scss'
+  styleUrl: './login-page.component.scss',
 })
 export class LoginPageComponent {
-
   email: string = '';
   password: string = '';
 
-  constructor(private router: Router, private authService: AuthService) { }
+  constructor(private router: Router, private authService: AuthService) {}
 
   ngOnInit(): void {
     let token = sessionStorage.getItem('token');
@@ -31,7 +38,6 @@ export class LoginPageComponent {
   }
 
   loginUser() {
-
     this.authService.login(this.email, this.password).subscribe(
       (response) => {
         if (response.token) {
@@ -39,13 +45,11 @@ export class LoginPageComponent {
           this.router.navigate(['contacts']);
         }
       },
-      (error) => console.log('Ha habido un error: ',error),
+      (error) => console.log('Ha habido un error: ', error),
       () => console.log('Petición completa')
-    )
-
+    );
 
     sessionStorage.setItem('token', '123456789');
     this.router.navigate(['contacts']);
   }
-
 }
