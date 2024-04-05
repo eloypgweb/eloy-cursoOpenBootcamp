@@ -44,6 +44,10 @@ export class ToolbarComponent {
     this.router.navigate(['formulario']);
   }
 
+  navegarParaConsumo(): void {
+    this.router.navigate(['consumo']);
+  }
+
   login(): void {
     this.router.navigate(['login']);
   }

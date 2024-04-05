@@ -6,6 +6,7 @@ import { ContactsPageComponent } from './pages/contacts-page/contacts-page.compo
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.component';
+import { ConsumoComponent } from './consumo/consumo.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -23,5 +24,6 @@ export const routes: Routes = [
     canActivate: [authGuard],
   },
   { path: 'formulario', component: FormularioComponent },
+  { path: 'consumo', component: ConsumoComponent },
   { path: '**', component: NotFoundPageComponent },
 ];

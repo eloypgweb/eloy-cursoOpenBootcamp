@@ -1,0 +1,23 @@
+<div>
+  <div class="tituloDiv">
+    <h2 class="titulo">Consumo API Rick y Morty</h2>
+  </div>
+
+  <div>
+    <mat-card *ngFor="let item of data">
+      <mat-card-content>
+        <h3>
+          Nombre: <strong>{{ item.name }}</strong>
+        </h3>
+        <ul>
+          <li>Location: {{ item.location.name }}</li>
+          <li>Origin: {{ item.origin.name }}</li>
+          <li>Status: {{ item.status }}</li>
+          <li>Species: {{ item.species }}</li>
+        </ul>
+
+        <img [src]="item.image" alt="Character Image" />
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
