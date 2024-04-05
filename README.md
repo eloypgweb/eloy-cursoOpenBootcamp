@@ -1,27 +1,32 @@
-# CursoBootcamp
+# Formación Angular - Eloy Pérez
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.2.
+Formación mediante cursos de Angular 16 y 17
 
-## Development server
+## Descripción
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Es un proyecto en el que abordamos distintos puntos esenciales en Angular. Rootingm, Forms, Angular Material, Filters, Login, Auth, Services, Guards, Mocks, APIs, GET - POST...
 
-## Code scaffolding
+## Características
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Login
+- Auth
+- Filter
+- APIs
+- ...
 
-## Build
+## Ejecución
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Sigue estos pasos para poner el proyecto en marcha:
 
-## Running unit tests
+1. git clone < enlace >
+2. npm i
+3. ng serve / npm run start
+4. Abrir link en el navegador
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Licencia
 
-## Running end-to-end tests
+Este proyecto está bajo la licencia [MIT](license).
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Contact
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Eloy Pérez - [eloypg.web@gmail.com](mailto:eloypg.web@gmail.com)
