@@ -7,6 +7,8 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.component';
 import { ConsumoComponent } from './consumo/consumo.component';
+import { EjemploPipesComponent } from './componentes/ejemplo-pipes/ejemplo-pipes.component';
+import { LoginFormComponent } from './componentes/login-form/login-form.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -24,6 +26,8 @@ export const routes: Routes = [
     canActivate: [authGuard],
   },
   { path: 'formulario', component: FormularioComponent },
+  { path: 'formulario2', component: LoginFormComponent },
   { path: 'consumo', component: ConsumoComponent },
+  { path: 'pipes', component: EjemploPipesComponent },
   { path: '**', component: NotFoundPageComponent },
 ];

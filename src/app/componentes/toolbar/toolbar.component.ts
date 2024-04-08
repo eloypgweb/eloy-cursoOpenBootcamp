@@ -44,8 +44,16 @@ export class ToolbarComponent {
     this.router.navigate(['formulario']);
   }
 
+  navegarParaForm2(): void {
+    this.router.navigate(['formulario2']);
+  }
+
   navegarParaConsumo(): void {
     this.router.navigate(['consumo']);
+  }
+
+  navegarParaPipes(): void {
+    this.router.navigate(['pipes']);
   }
 
   login(): void {

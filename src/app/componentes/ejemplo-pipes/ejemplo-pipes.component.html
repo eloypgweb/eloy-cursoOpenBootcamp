@@ -1,0 +1,45 @@
+<h1>Ejemplos PIPES nativos de Angular</h1>
+
+<!-- Fechas -->
+<h2>Pipes para Fechas</h2>
+
+<hr />
+
+<p>Mi cumpleaños es: {{ dob }}</p>
+
+<hr />
+
+<p>Mi cumpleaños con PIPE es: {{ dob | date }}</p>
+
+<hr />
+
+<p>Mi cumpleaños con PIPE FORMATEADO es: {{ dob | date : "dd/MM/yyyy" }}</p>
+
+<hr />
+
+<p>Mi cumpleaños con PIPE Short es: {{ dob | date : "shortDate" }}</p>
+<p>Mi cumpleaños con PIPE Full es: {{ dob | date : "fullDate" }}</p>
+
+<hr />
+
+<p>Mi cumpleaños con PIPE Full es: {{ dob | date : dateFormat }}</p>
+
+<button mat-raised-button color="primary" (click)="cambiarFormato()">
+  Cambiar Formato de la fecha a {{ !cambio ? "Short" : "Full" }}
+</button>
+
+<hr />
+
+<!-- MAYS / mins -->
+<h4>Bienvenido, {{ nombre | uppercase }}</h4>
+<h5>Nombre de usuario: &#64;{{ nombre | lowercase }}</h5>
+
+<hr />
+
+<!-- Combinación de PIPES -->
+<h2>Pipes para Fechas - MAYS / mins</h2>
+
+<hr />
+
+<p>Mi cumpleaños con PIPE Full es: {{ dob | date : dateFormat | uppercase }}</p>
+<p>Mi cumpleaños con PIPE Full es: {{ dob | date : dateFormat | lowercase }}</p>
