@@ -1,5 +1,9 @@
 import { ApplicationConfig } from '@angular/core';
-import { provideRouter } from '@angular/router';
+import {
+  provideRouter,
+  withComponentInputBinding,
+  withViewTransitions,
+} from '@angular/router';
 import { provideAnimations } from '@angular/platform-browser/animations';
 import { provideHttpClient } from '@angular/common/http';
 import { NgModel, ReactiveFormsModule } from '@angular/forms';
@@ -11,7 +15,7 @@ import { MaterialModule } from './modules/material/material.module';
 // Aquí importamos las cosas que necesitemos para el módulo de la aplicación
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideRouter(routes),
+    provideRouter(routes, withComponentInputBinding(), withViewTransitions()),
     provideAnimationsAsync(),
     provideHttpClient(),
     NgModel,

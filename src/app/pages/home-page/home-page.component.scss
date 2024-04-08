@@ -31,15 +31,15 @@ section {
 }
 
 .example-button-row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 
-    img {
-        max-width: 100%;
-        height: auto;
-    }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 .cosas {
@@ -67,18 +67,47 @@ section {
 }
 
 mat-card {
-    margin: 20px 0;
-    padding: 20px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  margin: 20px 0;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 
-    mat-card-title {
-        font-size: 24px;
-        margin-bottom: 10px;
-    }
+  mat-card-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
 
-    mat-card-subtitle {
-        font-size: 18px;
-        color: #757575;
-    }
+  mat-card-subtitle {
+    font-size: 18px;
+    color: #757575;
+  }
 }
 
+// ::view-transition-old(root) {
+//   animation: exit 0.2s ease-out 0s 1 normal forwards;
+// }
+
+// ::view-transition-new(root) {
+//   animation: enter 0.6s ease-in-out 0s 1 normal forwards;
+// }
+
+// @keyframes enter {
+//   from {
+//     opacity: 0;
+//     transform: translateY(-20px);
+//   }
+//   to {
+//     opacity: 1;
+//     transform: translateY(0);
+//   }
+// }
+
+// @keyframes exit {
+//   from {
+//     opacity: 1;
+//     transform: scale(1);
+//   }
+//   to {
+//     opacity: 0;
+//     transform: scale(0.8);
+//   }
+// }
